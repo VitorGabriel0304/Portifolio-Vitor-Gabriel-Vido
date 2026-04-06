@@ -1,0 +1,72 @@
+# Portfólio de Serviços — Vitor Gabriel Vido
+
+Site estático de portfólio de serviços de desenvolvimento web,
+hospedado no GitHub Pages.
+
+---
+
+## Estrutura de pastas
+
+```
+portfolio/
+│
+├── index.html          ← Página principal (toda a estrutura HTML)
+│
+├── css/
+│   └── style.css       ← Todos os estilos (design, responsivo, animações)
+│
+├── js/
+│   └── main.js         ← Todos os comportamentos (menu, scroll, tabs, cursor)
+│
+└── assets/             ← Crie esta pasta para suas imagens
+    └── foto.jpg        ← ⚠️ Coloque sua foto aqui (quando tiver)
+```
+
+---
+
+## Como adicionar sua foto
+
+1. Coloque o arquivo `foto.jpg` dentro da pasta `assets/`
+2. No `index.html`, localize este bloco (busque por `logo-avatar`):
+
+```html
+<a href="#hero" class="logo">
+  <div class="logo-avatar" aria-hidden="true">VG</div>
+  VG<span>VIDO</span>
+</a>
+```
+
+3. Substitua pelo bloco abaixo:
+
+```html
+<a href="#hero" class="logo">
+  <img src="assets/foto.jpg" alt="Vitor Gabriel Vido" class="logo-img" />
+  VG<span>VIDO</span>
+</a>
+```
+
+4. No `css/style.css`, descomente o bloco `.logo-img` (está comentado com instruções).
+
+---
+
+## Como trocar o número do WhatsApp
+
+No `index.html`, localize a linha (busque por `wa.me`):
+
+```html
+href="https://wa.me/5514999999999?text=..."
+```
+
+Troque `5514999999999` pelo seu número com código do país + DDD.
+Exemplo: `5514912345678` (55 = Brasil, 14 = DDD Jaú, resto = número)
+
+## Personalizações rápidas
+
+| O que mudar           | Onde                                       |
+| --------------------- | ------------------------------------------ |
+| Seu nome completo     | `index.html` — seção `#sobre` e `footer`   |
+| Cidade/estado         | `index.html` — badge do hero e footer      |
+| Número do WhatsApp    | `index.html` — botão `btn-whatsapp`        |
+| Cor de acento (âmbar) | `css/style.css` — variável `--gold`        |
+| Preços dos serviços   | `index.html` — seções `tab-*`              |
+| Foto/avatar           | `assets/foto.jpg` + ajuste no `index.html` |

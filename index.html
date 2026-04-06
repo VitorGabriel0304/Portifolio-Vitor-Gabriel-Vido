@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vitor Gabriel Vido — Desenvolvedor web em Jaú, SP. Sites, sistemas e lojas virtuais profissionais para pequenos negócios." />
+
+  <title>Vitor Gabriel Vido — Desenvolvimento Web</title>
+
+  <!-- =============================================
+       FONTES DO GOOGLE FONTS
+       - Bebas Neue : títulos de impacto
+       - DM Sans    : corpo de texto moderno
+       - JetBrains  : detalhes técnicos e badges
+  ============================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Folha de estilos externa -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====================================================
+       CURSOR CUSTOMIZADO (visível apenas em desktop)
+  ==================================================== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ====================================================
+       MENU MOBILE — overlay lateral
+  ==================================================== -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Fechar menu">✕</button>
+    <div class="mobile-nav-logo">VG<span>VIDO</span></div>
+    <ul class="mobile-nav-links">
+      <li><a href="#sobre"      class="mobile-link">Sobre</a></li>
+      <li><a href="#tecnologias" class="mobile-link">Tech</a></li>
+      <li><a href="#servicos"   class="mobile-link">Serviços</a></li>
+      <li><a href="#hospedagem" class="mobile-link">Hospedagem</a></li>
+      <li><a href="#contato"    class="mobile-link">Contato</a></li>
+    </ul>
+    <a href="#contato" class="btn-primary mobile-cta mobile-link">Solicitar orçamento →</a>
+  </nav>
+
+  <!-- ====================================================
+       HEADER FIXO
+  ==================================================== -->
+  <header id="header">
+    <div class="container header-inner">
+
+      <!-- ── LOGO / FOTO ──────────────────────────────
+           Quando tiver sua foto, substitua o bloco
+           .logo-avatar pelo código comentado abaixo.
+
+           PASSO A PASSO:
+           1. Coloque sua foto em: assets/foto.jpg
+           2. Apague o bloco <div class="logo-avatar">...</div>
+           3. Descomente o bloco <img> abaixo
+
+           <a href="#hero" class="logo">
+             <img
+               src="assets/foto.jpg"
+               alt="Vitor Gabriel Vido"
+               class="logo-img"
+             />
+             VG<span>VIDO</span>
+           </a>
+      ─────────────────────────────────────────────── -->
+      <a href="#hero" class="logo">
+        <div class="logo-avatar" aria-hidden="true">VG</div>
+        VG<span>VIDO</span>
+      </a>
+
+      <!-- Navegação desktop -->
+      <nav class="desktop-nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#tecnologias">Tech</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#hospedagem">Hospedagem</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <!-- CTA desktop + hamburger mobile -->
+      <div class="header-actions">
+        <a href="#contato" class="btn-header">Solicitar orçamento</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ====================================================
+       HERO
+  ==================================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Disponível para novos projetos — Jaú, SP
+        </div>
+
+        <h1>
+          Desenvolvimento
+          <span class="accent">Web Profissional</span>
+        </h1>
+
+        <p>
+          Sites modernos, sistemas web e lojas virtuais sob medida para pequenos negócios.
+          Código limpo, design responsivo e entrega rápida — presencial em Jaú/SP ou totalmente remoto.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#servicos" class="btn-primary">Ver serviços e preços →</a>
+          <a href="#sobre"    class="btn-secondary">Conhecer o trabalho</a>
+        </div>
+
+        <div class="tech-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">GitHub Pages</span>
+          <span class="tag">Painel Admin</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Partícula decorativa de fundo -->
+    <div class="hero-glow" aria-hidden="true"></div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====================================================
+       SOBRE MIM
+  ==================================================== -->
+  <section id="sobre">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="section-label">Sobre mim</div>
+        <h2 class="section-title">Quem está<br>por trás do código</h2>
+        <p class="section-sub">
+          Desenvolvedor web com foco em entregas rápidas, design limpo e soluções
+          acessíveis para quem está começando sua presença digital.
+        </p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-text reveal">
+          <p>
+            Meu nome é <strong>Vitor Gabriel Vido</strong>, tenho 22 anos e sou desenvolvedor web
+            baseado em Jaú, SP. Trabalho com tecnologias modernas e leves —
+            Python com Flask, MySQL, HTML, CSS e JavaScript — para entregar
+            projetos rápidos, organizados e com estrutura profissional.
+          </p>
+          <p>
+            Meu foco são <strong>pequenos negócios</strong> que estão dando seus primeiros passos
+            no digital. Entendo a realidade de quem está começando: orçamento limitado,
+            prazo curto e necessidade de resultado real. Por isso ofereço soluções práticas,
+            objetivas e com excelente custo-benefício.
+          </p>
+          <p>
+            Atendo de forma <strong>presencial em Jaú/SP</strong> e também
+            <strong>remotamente</strong> para qualquer lugar do Brasil —
+            desde uma landing page simples até sistemas completos
+            com painel administrativo e banco de dados.
+          </p>
+
+          <!-- Diferenciais resumidos em chips -->
+          <div class="about-chips">
+            <span class="chip">✓ Entrega em 2–5 dias (Podendo ser até mais depedendo do projeto) </span>
+            <span class="chip">✓ 3 dias de teste gratuito</span>
+            <span class="chip">✓ Suporte pós-entrega</span>
+            <span class="chip">✓ Design responsivo incluso</span>
+          </div>
+        </div>
+
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <div class="stat-number">2–5</div>
+            <div class="stat-label">Dias úteis de entrega média,podendo ser mais dependendo do projeto</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Dias de teste gratuito</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50%</div>
+            <div class="stat-label">Na entrada + 50% na entrega</div>
+          </div>
+          <div class="stat-card gold-card">
+            <div class="stat-number">JAÚ</div>
+            <div class="stat-label">SP — Local e remoto</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====================================================
+       TECNOLOGIAS
+  ==================================================== -->
+  <section id="tecnologias">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="section-label">Stack técnico</div>
+        <h2 class="section-title">Tecnologias<br>que utilizo</h2>
+        <p class="section-sub">
+          Ferramentas modernas e confiáveis, escolhidas para garantir
+          performance, organização e fácil manutenção no longo prazo.
+        </p>
+      </div>
+
+      <div class="tech-grid reveal">
+
+        <div class="tech-card">
+          <span class="tech-icon">🐍</span>
+          <div class="tech-name">Python</div>
+          <div class="tech-role">Linguagem principal do backend</div>
+          <div class="tech-desc">Linguagem limpa e poderosa usada para toda a lógica do servidor, regras de negócio e integrações.</div>
+        </div>
+
+        <div class="tech-card">
+          <span class="tech-icon">⚗️</span>
+          <div class="tech-name">Flask</div>
+          <div class="tech-role">Framework web leve</div>
+          <div class="tech-desc">Micro-framework Python ideal para sistemas pequenos e médios: rápido de desenvolver e fácil de manter.</div>
+        </div>
+
+        <div class="tech-card">
+          <span class="tech-icon">🗄️</span>
+          <div class="tech-name">MySQL</div>
+          <div class="tech-role">Banco de dados relacional</div>
+          <div class="tech-desc">Armazenamento seguro e organizado de produtos, usuários, pedidos e qualquer dado do sistema.</div>
+        </div>
+
+        <div class="tech-card">
+          <span class="tech-icon">🏗️</span>
+          <div class="tech-name">HTML5</div>
+          <div class="tech-role">Estrutura semântica</div>
+          <div class="tech-desc">Base de todas as páginas, escrita com semântica correta para acessibilidade e SEO básico.</div>
+        </div>
+
+        <div class="tech-card">
+          <span class="tech-icon">🎨</span>
+          <div class="tech-name">CSS3</div>
+          <div class="tech-role">Design responsivo</div>
+          <div class="tech-desc">Estilização completa com layouts flexíveis que se adaptam a celular, tablet e desktop.</div>
+        </div>
+
+        <div class="tech-card">
+          <span class="tech-icon">⚡</span>
+          <div class="tech-name">JavaScript</div>
+          <div class="tech-role">Interatividade e UX</div>
+          <div class="tech-desc">Animações, filtros, validações e qualquer comportamento dinâmico que melhora a experiência do usuário.</div>
+        </div>
+
+        <div class="tech-card">
+          <span class="tech-icon">🔐</span>
+          <div class="tech-name">Painel Admin</div>
+          <div class="tech-role">Gestão de conteúdo</div>
+          <div class="tech-desc">Área protegida por login onde o cliente gerencia produtos, pedidos e conteúdo sem precisar de programador.</div>
+        </div>
+
+        <div class="tech-card">
+          <span class="tech-icon">📱</span>
+          <div class="tech-name">Mobile-First</div>
+          <div class="tech-role">Responsividade garantida</div>
+          <div class="tech-desc">Todo projeto é construído pensando primeiro no celular — onde a maioria dos clientes vai acessar.</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====================================================
+       SERVIÇOS E PREÇOS
+  ==================================================== -->
+  <section id="servicos">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="section-label">Tabela de preços</div>
+        <h2 class="section-title">Serviços &<br>investimento</h2>
+        <p class="section-sub">
+          Escolha a categoria do seu projeto e veja os planos disponíveis.
+          Todos os valores já incluem design responsivo, otimização e suporte inicial.
+        </p>
+      </div>
+
+      <!-- Abas de navegação -->
+      <div class="tabs reveal" role="tablist">
+        <button class="tab-btn active" data-tab="estaticos"  role="tab">Sites Estáticos</button>
+        <button class="tab-btn"        data-tab="portfolio"  role="tab">Portfólio</button>
+        <button class="tab-btn"        data-tab="lojas"      role="tab">Lojas Virtuais</button>
+        <button class="tab-btn"        data-tab="sistemas"   role="tab">Sistemas Web</button>
+      </div>
+
+      <!-- ── SITES ESTÁTICOS ─────────────────────────────── -->
+      <div class="tab-panel active" id="tab-estaticos" role="tabpanel">
+        <div class="pricing-grid">
+
+          <div class="pricing-card">
+            <div class="pricing-badge">✦ Ponto de entrada</div>
+            <div class="pricing-name">Landing Page</div>
+            <div class="pricing-use">Portfólio pessoal ou cardápio digital</div>
+            <div class="pricing-price">R$ 150 – 300<span>valor único · sem mensalidade</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Página única e objetiva para apresentar seu negócio, cardápio ou serviço.
+              Inclui botão de WhatsApp flutuante, seção de contato e design responsivo.
+              Ideal para quem quer marcar presença online com rapidez e baixo custo.
+            </div>
+            <ul class="pricing-features">
+              <li>1 página completa</li>
+              <li>Botão WhatsApp integrado</li>
+              <li>Formulário ou link de contato</li>
+              <li>Publicação no GitHub Pages</li>
+            </ul>
+            <div class="pricing-monthly">Sem manutenção mensal obrigatória</div>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-badge">★ Mais escolhido</div>
+            <div class="pricing-name">Site Básico</div>
+            <div class="pricing-use">Empresa pequena ou profissional autônomo</div>
+            <div class="pricing-price">R$ 250 – 500<span>valor único · sem mensalidade</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Site completo com múltiplas seções para apresentar sua empresa, serviços e equipe.
+              Ótimo para quem precisa de credibilidade online e um endereço web profissional
+              para indicar a clientes e parceiros.
+            </div>
+            <ul class="pricing-features">
+              <li>Até 5 páginas ou seções</li>
+              <li>Sobre, Serviços, Contato</li>
+              <li>Design personalizado</li>
+              <li>Publicação no GitHub Pages</li>
+            </ul>
+            <div class="pricing-monthly">Sem manutenção mensal obrigatória</div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-badge">✦ Intermediário</div>
+            <div class="pricing-name">Site Completo</div>
+            <div class="pricing-use">Empresa média em crescimento</div>
+            <div class="pricing-price">R$ 400 – 800<span>valor único · sem mensalidade</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Site robusto com mais conteúdo, animações e seções detalhadas.
+              Ideal para empresas que querem transmitir profissionalismo e
+              se destacar da concorrência com um visual diferenciado.
+            </div>
+            <ul class="pricing-features">
+              <li>Até 10 páginas ou seções</li>
+              <li>Animações e efeitos visuais</li>
+              <li>Galeria de fotos ou portfólio</li>
+              <li>Mapa de localização</li>
+            </ul>
+            <div class="pricing-monthly">Sem manutenção mensal obrigatória</div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-badge">✦ Completo</div>
+            <div class="pricing-name">Site Empresarial</div>
+            <div class="pricing-use">Empresa consolidada ou institucional</div>
+            <div class="pricing-price">R$ 600 – 1.000<span>valor único · sem mensalidade</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Layout premium com identidade visual forte, múltiplas seções estratégicas
+              e atenção máxima aos detalhes. Para empresas que precisam de um site
+              à altura da sua marca e reputação no mercado.
+            </div>
+            <ul class="pricing-features">
+              <li>Layout totalmente personalizado</li>
+              <li>Identidade visual aplicada</li>
+              <li>Seções estratégicas ilimitadas</li>
+              <li>Otimização de velocidade avançada</li>
+            </ul>
+            <div class="pricing-monthly">Sem manutenção mensal obrigatória</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── PORTFÓLIO ────────────────────────────────────── -->
+      <div class="tab-panel" id="tab-portfolio" role="tabpanel">
+        <div class="pricing-grid">
+
+          <div class="pricing-card">
+            <div class="pricing-badge">✦ Simples</div>
+            <div class="pricing-name">Portfólio Simples</div>
+            <div class="pricing-use">Fotógrafos, designers e freelancers</div>
+            <div class="pricing-price">R$ 150 – 250<span>valor único</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Galeria visual dos seus trabalhos com página de contato.
+              Perfeito para quem precisa mostrar o que faz de forma
+              direta e profissional, sem complexidade.
+            </div>
+            <ul class="pricing-features">
+              <li>Galeria de projetos/fotos</li>
+              <li>Página de contato</li>
+              <li>Links para redes sociais</li>
+              <li>GitHub Pages gratuito</li>
+            </ul>
+            <div class="pricing-monthly has-monthly">Manutenção opcional — R$ 20/mês</div>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-badge">★ Recomendado</div>
+            <div class="pricing-name">Portfólio Profissional</div>
+            <div class="pricing-use">Profissionais liberais e prestadores de serviço</div>
+            <div class="pricing-price">R$ 250 – 450<span>valor único</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Site completo para se apresentar ao mercado: quem você é,
+              o que faz, seus projetos e como contratar. Transmite
+              confiança e autoridade para potenciais clientes.
+            </div>
+            <ul class="pricing-features">
+              <li>Seção "Sobre mim" detalhada</li>
+              <li>Projetos com descrição</li>
+              <li>Depoimentos de clientes</li>
+              <li>Formulário de orçamento</li>
+            </ul>
+            <div class="pricing-monthly">Sem manutenção mensal</div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-badge">✦ Avançado</div>
+            <div class="pricing-name">Portfólio com Painel</div>
+            <div class="pricing-use">Quem quer atualizar o conteúdo sozinho</div>
+            <div class="pricing-price">R$ 450 – 700<span>valor único</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Portfólio profissional completo + painel administrativo para
+              você adicionar, editar e remover projetos sem precisar
+              de programador. Seu site sempre atualizado.
+            </div>
+            <ul class="pricing-features">
+              <li>Tudo do Portfólio Profissional</li>
+              <li>Painel admin protegido por login</li>
+              <li>Gerenciar projetos e fotos</li>
+              <li>Banco de dados MySQL</li>
+            </ul>
+            <div class="pricing-monthly">Sem manutenção mensal</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── LOJAS VIRTUAIS ──────────────────────────────── -->
+      <div class="tab-panel" id="tab-lojas" role="tabpanel">
+        <div class="pricing-grid">
+
+          <div class="pricing-card">
+            <div class="pricing-badge">✦ Pequena</div>
+            <div class="pricing-name">Loja Pequena</div>
+            <div class="pricing-use">Negócios locais e vendas pelo WhatsApp</div>
+            <div class="pricing-price">R$ 400 – 800<span>valor único</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Catálogo virtual com até 20 produtos onde o cliente visualiza
+              o que você vende e finaliza o pedido pelo WhatsApp.
+              Simples, rápido e sem taxa por venda.
+            </div>
+            <ul class="pricing-features">
+              <li>Até 20 produtos cadastrados</li>
+              <li>Carrinho de compras</li>
+              <li>Pedido via WhatsApp</li>
+              <li>Painel para gerenciar estoque</li>
+            </ul>
+            <div class="pricing-monthly has-monthly">Manutenção R$ 60 – 100/mês</div>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-badge">★ Mais escolhida</div>
+            <div class="pricing-name">Loja Média</div>
+            <div class="pricing-use">Comércio em expansão com catálogo variado</div>
+            <div class="pricing-price">R$ 800 – 1.300<span>valor único</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Loja completa com catálogo organizado por categorias, painel admin
+              para gerenciar produtos e pedidos, e sistema de filtros para
+              o cliente encontrar o que precisa rapidamente.
+            </div>
+            <ul class="pricing-features">
+              <li>Até 100 produtos com categorias</li>
+              <li>Painel admin completo</li>
+              <li>Filtro e busca de produtos</li>
+              <li>Gestão de pedidos</li>
+            </ul>
+            <div class="pricing-monthly has-monthly">Manutenção R$ 80 – 120/mês</div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-badge">✦ Completa</div>
+            <div class="pricing-name">Loja Completa</div>
+            <div class="pricing-use">E-commerce profissional sem limitações</div>
+            <div class="pricing-price">R$ 1.200 – 2.000<span>valor único</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Sistema de e-commerce robusto com produtos ilimitados, múltiplas
+              categorias, relatórios de vendas e todas as funcionalidades
+              necessárias para operar um comércio online com profissionalismo.
+            </div>
+            <ul class="pricing-features">
+              <li>Produtos ilimitados</li>
+              <li>Dashboard de vendas e relatórios</li>
+              <li>Múltiplas categorias e subcategorias</li>
+              <li>Sistema completo personalizado</li>
+            </ul>
+            <div class="pricing-monthly has-monthly">Manutenção R$ 100 – 150/mês</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── SISTEMAS WEB ────────────────────────────────── -->
+      <div class="tab-panel" id="tab-sistemas" role="tabpanel">
+        <div class="pricing-grid">
+
+          <div class="pricing-card">
+            <div class="pricing-badge">✦ Básico</div>
+            <div class="pricing-name">Sistema Simples</div>
+            <div class="pricing-use">Cadastros, listas e controles básicos</div>
+            <div class="pricing-price">R$ 400 – 800<span>valor único</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Sistema web com login e área restrita para gerenciar informações
+              do seu negócio. Ideal para substituir planilhas e cadernos por
+              algo mais organizado, seguro e acessível de qualquer dispositivo.
+            </div>
+            <ul class="pricing-features">
+              <li>Login e autenticação</li>
+              <li>Painel de controle</li>
+              <li>Cadastro e listagem de dados</li>
+              <li>Acesso de qualquer lugar</li>
+            </ul>
+            <div class="pricing-monthly has-monthly">Manutenção R$ 60 – 100/mês</div>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-badge">★ Gestão</div>
+            <div class="pricing-name">Sistema Administrativo</div>
+            <div class="pricing-use">Controle completo da sua empresa</div>
+            <div class="pricing-price">R$ 800 – 1.400<span>valor único</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Sistema robusto com dashboard visual, relatórios e múltiplos
+              módulos de gestão. Para empresas que precisam ter controle
+              real sobre clientes, produtos, funcionários ou processos internos.
+            </div>
+            <ul class="pricing-features">
+              <li>Dashboard com gráficos e métricas</li>
+              <li>Relatórios exportáveis</li>
+              <li>Múltiplos níveis de acesso</li>
+              <li>Módulos personalizáveis</li>
+            </ul>
+            <div class="pricing-monthly has-monthly">Manutenção R$ 80 – 140/mês</div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-badge">✦ Sob medida</div>
+            <div class="pricing-name">Sistema Personalizado</div>
+            <div class="pricing-use">Qualquer necessidade específica</div>
+            <div class="pricing-price">A partir de R$ 900<span>valor único</span></div>
+            <hr class="pricing-divider" />
+            <div class="pricing-desc">
+              Para projetos únicos que não se encaixam nos modelos acima.
+              O sistema é desenhado do zero conforme a sua necessidade,
+              com orçamento fechado após entendimento completo do projeto.
+            </div>
+            <ul class="pricing-features">
+              <li>Levantamento de requisitos</li>
+              <li>Desenvolvimento 100% personalizado</li>
+              <li>Sistema completo sob demanda</li>
+              <li>Orçamento fechado sem surpresas</li>
+            </ul>
+            <div class="pricing-monthly has-monthly">Manutenção R$ 100 – 180/mês</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====================================================
+       CONDIÇÕES GERAIS
+  ==================================================== -->
+  <section id="condicoes">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="section-label">Como funciona</div>
+        <h2 class="section-title">Condições<br>gerais</h2>
+        <p class="section-sub">
+          Processo transparente do início ao fim — sem letras miúdas, sem surpresas no orçamento.
+        </p>
+      </div>
+
+      <div class="conditions-grid reveal">
+
+        <div class="condition-item">
+          <div class="condition-icon">🧪</div>
+          <div class="condition-title">3 dias de teste gratuito</div>
+          <div class="condition-text">
+            Após a entrega, você tem 3 dias completos para navegar pelo projeto,
+            testar todas as funcionalidades e solicitar pequenos ajustes visuais
+            antes da aprovação e ativação definitiva.
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <div class="condition-icon">⚡</div>
+          <div class="condition-title">Taxa de ativação: R$ 30</div>
+          <div class="condition-text">
+            Após a aprovação no período de teste, é cobrada uma taxa única de R$ 30
+            referente à ativação definitiva do projeto e configuração final de publicação.
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <div class="condition-icon">📅</div>
+          <div class="condition-title">Entrega em 2 a 5 dias úteis</div>
+          <div class="condition-text">
+            A maioria dos projetos fica pronta em 2 a 5 dias úteis a partir do
+            pagamento da entrada. Projetos mais complexos têm prazo ajustado
+            e combinado antes do início.
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <div class="condition-icon">💰</div>
+          <div class="condition-title">Pagamento em duas etapas</div>
+          <div class="condition-text">
+            50% no início do desenvolvimento e 50% na entrega final após aprovação.
+            Você só paga o restante quando estiver satisfeito com o resultado.
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <div class="condition-icon">🛠️</div>
+          <div class="condition-title">Suporte inicial incluso</div>
+          <div class="condition-text">
+            Após a entrega, o suporte para ajustes simples já está incluso.
+            Novas funcionalidades ou alterações maiores são orçadas separadamente
+            e de forma transparente.
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <div class="condition-icon">📦</div>
+          <div class="condition-title">Incluso em todo projeto</div>
+          <div class="condition-text">
+            Design responsivo para celular e desktop, otimização básica de carregamento,
+            configuração inicial de publicação online e suporte após a entrega.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====================================================
+       HOSPEDAGEM
+  ==================================================== -->
+  <section id="hospedagem">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="section-label">Infraestrutura</div>
+        <h2 class="section-title">Hospedagem<br>& domínio</h2>
+        <p class="section-sub">
+          A hospedagem varia conforme o tipo de projeto. Veja qual opção se aplica ao seu caso.
+        </p>
+      </div>
+
+      <div class="hosting-grid reveal">
+
+        <div class="hosting-card">
+          <div class="hosting-type">Para sites estáticos</div>
+          <div class="hosting-name">GitHub Pages</div>
+          <div class="hosting-platform">🆓 Hospedagem gratuita</div>
+          <div class="hosting-desc">
+            Ideal para landing pages, portfólios e cardápios digitais —
+            sem custo de servidor. O domínio padrão é fornecido pela plataforma
+            (<em>seusite.github.io</em>). Domínio personalizado é opcional e pago à parte.
+          </div>
+          <ul class="hosting-list">
+            <li>Landing pages e portfólios</li>
+            <li>Cardápios e catálogos digitais</li>
+            <li>Sites institucionais estáticos</li>
+            <li>Domínio personalizado opcional — R$ 40 a 70/ano</li>
+          </ul>
+        </div>
+
+        <div class="hosting-card">
+          <div class="hosting-type">Para sistemas dinâmicos</div>
+          <div class="hosting-name">Servidor Dedicado</div>
+          <div class="hosting-platform">⚙️ Home Host — funcionamento contínuo</div>
+          <div class="hosting-desc">
+            Servidor com banco de dados MySQL e backend Python/Flask rodando 24h.
+            Obrigatório para qualquer projeto com login, painel admin,
+            cadastro de produtos ou funcionalidades dinâmicas.
+          </div>
+          <ul class="hosting-list">
+            <li>Painel administrativo e login de usuários</li>
+            <li>Banco de dados MySQL completo</li>
+            <li>Lojas virtuais e sistemas web</li>
+            <li>Cadastro e gestão de produtos</li>
+            <li>Domínio personalizado — R$ 40 a 70/ano</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Nota sobre domínio -->
+      <div class="hosting-note reveal">
+        <span class="hosting-note-icon">ℹ️</span>
+        <p>
+          O domínio (ex: <strong>www.suaempresa.com.br</strong>) é pago à parte e custa entre
+          <strong>R$ 40 e R$ 70 por ano</strong>, dependendo do provedor.
+          Pode ser adquirido pelo cliente ou configurado com minha ajuda durante a entrega do projeto.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====================================================
+       CTA FINAL
+  ==================================================== -->
+  <section class="cta-section" id="contato">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Vamos trabalhar juntos</div>
+        <h2>Pronto para <span class="gold">começar</span><br>seu projeto?</h2>
+        <p>
+          Me chama no WhatsApp para conversar sobre seu projeto e receber
+          um orçamento personalizado. Resposta rápida e sem enrolação.
+        </p>
+
+        <!-- ⚠️ Troque o número abaixo pelo seu número real com DDD -->
+        <a
+          href="https://wa.me/5514998163055?text=Ol%C3%A1%2C%20Vitor!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-whatsapp"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       FOOTER
+  ==================================================== -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        © 2025 <span>Vitor Gabriel Vido</span> — Desenvolvimento Web · Jaú, SP
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script externo -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
