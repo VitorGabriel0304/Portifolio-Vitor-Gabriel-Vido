@@ -1145,37 +1145,58 @@ section {
    ===================================================== */
 footer {
   border-top: 1px solid var(--border);
-  padding: 36px 0;
+  padding: 40px 0;
   position: relative;
   z-index: 1;
 }
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  flex-direction: column; /* Força um embaixo do outro */
+  align-items: center;    /* Centraliza horizontalmente no desktop */
+  justify-content: center;
+  gap: 24px;              /* Espaço entre os botões e o texto */
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+  order: 1;               /* Garante que os botões fiquem em CIMA */
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  text-transform: uppercase; /* Opcional: dá um ar mais "tech" profissional */
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--gold);
 }
 
 .footer-copy {
   font-size: 0.8rem;
   color: var(--text-muted);
+  order: 2;               /* Garante que o copyright fique EMBAIXO */
 }
-.footer-copy span { color: var(--gold); }
 
-.footer-links {
-  display: flex;
-  gap: 22px;
+.footer-copy span {
+  color: var(--gold);
+  font-weight: 500;
 }
-.footer-links a {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: var(--transition);
-}
-.footer-links a:hover { color: var(--gold); }
 
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  .footer-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 /* =====================================================
    19. RESPONSIVIDADE — BREAKPOINTS
