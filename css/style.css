@@ -1242,3 +1242,81 @@ footer {
   .logo        { font-size: 1.3rem; }
   .logo-avatar { width: 34px; height: 34px; font-size: 0.8rem; }
 }
+
+
+/* =====================================================
+   20. PROCESSO DE TRABALHO — linha do tempo
+   ===================================================== */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+/* Linha vertical conectando os passos */
+.process-steps::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--border) 100%);
+}
+
+.process-step {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  padding: 0 0 40px 0;
+  position: relative;
+}
+
+/* Número do passo — círculo âmbar */
+.step-number {
+  flex-shrink: 0;
+  width: 56px; height: 56px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold);
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+}
+
+.process-step:hover .step-number {
+  background: var(--gold);
+  color: #000;
+}
+
+.step-content {
+  padding-top: 12px;
+  flex: 1;
+}
+
+.step-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.step-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+/* Mobile: linha lateral some, fica vertical simples */
+@media (max-width: 600px) {
+  .process-steps::before { display: none; }
+  .process-step { gap: 16px; padding-bottom: 28px; }
+  .step-number  { width: 44px; height: 44px; font-size: 0.9rem; }
+}
